@@ -64,7 +64,7 @@ jobs:
   SucceessNotification:
     if: ${{ success() }}
     name: Send Success Message
-    needs: [build]
+    needs: [ImageBuild]
     runs-on: ubuntu-latest
     steps:
       - name: Send Message to Slack
@@ -81,7 +81,7 @@ jobs:
   FailureAlert:
     if: ${{ failure() }}
     name: Notify failure
-    needs: [build]
+    needs: [ImageBuild]
     runs-on: ubuntu-latest
     steps:
       - name: Send Failure Alert to Slack
