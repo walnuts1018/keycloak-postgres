@@ -1,4 +1,4 @@
-FROM quay.io/repository/keycloak:22.0
+FROM quay.io/keycloak/keycloak:22.0
 
 RUN "/opt/keycloak/bin/kc.sh build --db=postgres"
 
